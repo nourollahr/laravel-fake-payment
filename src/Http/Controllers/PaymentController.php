@@ -1,6 +1,6 @@
 <?php
 
-namespace FakePayment\Http\Controllers;
+namespace Nourollahr\FakePayment\Http\Controllers;
 
 use FakePayment\Facades\FakePayment;
 use Illuminate\Http\Request;

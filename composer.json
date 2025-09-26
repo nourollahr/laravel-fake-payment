@@ -33,21 +33,21 @@
   },
   "autoload": {
     "psr-4": {
-      "FakePayment\\": "src/"
+      "Nourollahr\\FakePayment\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "FakePayment\\Tests\\": "tests/"
+      "Nourollahr\\FakePayment\\Tests\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "FakePayment\\FakePaymentServiceProvider"
+        "Nourollahr\\FakePayment\\FakePaymentServiceProvider"
       ],
       "aliases": {
-        "FakePayment": "FakePayment\\Facades\\FakePayment"
+        "FakePayment": "Nourollahr\\FakePayment\\Facades\\FakePayment"
       }
     }
   },

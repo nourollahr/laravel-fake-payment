@@ -1,6 +1,6 @@
 <?php
 
-namespace FakePayment;
+namespace Nourollahr\FakePayment;
 
 use Illuminate\Support\ServiceProvider;
 

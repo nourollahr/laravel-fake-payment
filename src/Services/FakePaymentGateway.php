@@ -1,6 +1,6 @@
 <?php
 
-namespace FakePayment\Services;
+namespace Nourollahr\FakePayment\Services;
 
 class FakePaymentGateway
 {
