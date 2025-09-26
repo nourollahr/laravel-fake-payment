@@ -17,7 +17,7 @@ class PaymentTest extends TestCase
         return ['FakePayment' => 'FakePayment\\Facades\\FakePayment'];
     }
 
-    public function testPaymentProcess()
+    public function test_payment_process()
     {
         $transactionId = 'TXN12345';
         $status = 'success';

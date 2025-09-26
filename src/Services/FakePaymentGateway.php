@@ -11,13 +11,13 @@ class FakePaymentGateway
         $redirect = route('fakepayment.page', [
             'txn' => $transactionId,
             'amount' => $amount,
-            'callback' => base64_encode($callbackUrl)
+            'callback' => base64_encode($callbackUrl),
         ]);
 
         return [
             'transaction_id' => $transactionId,
             'amount' => $amount,
-            'redirect_url'   => $redirect,
+            'redirect_url' => $redirect,
         ];
     }
 

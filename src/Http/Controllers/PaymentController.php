@@ -2,9 +2,8 @@
 
 namespace FakePayment\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use FakePayment\Facades\FakePayment;
+use Illuminate\Http\Request;
 
 class PaymentController
 {
@@ -38,12 +37,12 @@ class PaymentController
 
         if ($callback) {
             $separator = (parse_url($callback, PHP_URL_QUERY) ? '&' : '?');
-            $redirectUrl = $callback . $separator . http_build_query([
-                    'txn' => $txn,
-                    'status' => $result['status'],
-                    'message' => $result['message'],
-                    'amount' => $amount,
-                ]);
+            $redirectUrl = $callback.$separator.http_build_query([
+                'txn' => $txn,
+                'status' => $result['status'],
+                'message' => $result['message'],
+                'amount' => $amount,
+            ]);
 
             return redirect($redirectUrl);
         }
