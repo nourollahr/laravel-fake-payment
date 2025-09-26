@@ -3,9 +3,42 @@
   "description": "A fake payment gateway package for Laravel (for testing purposes)",
   "type": "library",
   "license": "MIT",
+  "homepage": "https://github.com/nourollahr/laravel-fake-payment",
+  "keywords": [
+    "laravel",
+    "iran",
+    "payment",
+    "gateway",
+    "purchase",
+    "bank",
+    "banking",
+    "payment system",
+    "fake",
+    "gateway",
+    "testing"
+  ],
+  "authors": [
+    {
+      "name": "Nourollah Rezaei",
+      "email": "nourollahr@gmail.com",
+      "homepage": "https://github.com/nourollahr"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "illuminate/support": "^10.0|^11.0|^12.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.25"
+  },
   "autoload": {
     "psr-4": {
       "FakePayment\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "FakePayment\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -17,13 +50,6 @@
         "FakePayment": "FakePayment\\Facades\\FakePayment"
       }
     }
-  },
-  "require": {
-    "php": ">=8.0",
-    "illuminate/support": "^10.0|^11.0|^12.0"
-  },
-  "require-dev": {
-    "laravel/pint": "^1.25"
   },
   "scripts": {
     "check-style": "./vendor/bin/pint --test",
