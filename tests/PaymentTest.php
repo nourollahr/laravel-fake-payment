@@ -19,8 +19,13 @@ class PaymentTest extends TestCase
 
     public function testPaymentProcess()
     {
-        $response = FakePayment::pay(10000, 'http://localhost/callback');
-        $this->assertArrayHasKey('transaction_id', $response);
-        $this->assertArrayHasKey('redirect_url', $response);
+        $transactionId = 'TXN12345';
+        $status = 'success';
+
+        $result = FakePayment::verify($transactionId, $status);
+
+        $this->assertEquals($transactionId, $result['transaction_id']);
+        $this->assertEquals($status, $result['status']);
+        $this->assertArrayHasKey('message', $result);
     }
 }
