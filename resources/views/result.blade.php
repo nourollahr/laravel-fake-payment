@@ -4,6 +4,7 @@
 <body>
 <h1>Payment Result</h1>
 <p>Transaction: {{ $result['transaction_id'] }}</p>
+<p>Amount: {{ $amount }} ریال</p>
 <p>Status: {{ $result['status'] }}</p>
 <p>Message: {{ $result['message'] }}</p>
 </body>

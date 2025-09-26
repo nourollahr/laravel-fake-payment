@@ -4,17 +4,19 @@ namespace FakePayment\Services;
 
 class FakePaymentGateway
 {
-    public function pay(int $amount, string $callbackUrl)
+    public function pay(int $amount, ?string $callbackUrl = null)
     {
         $transactionId = uniqid('txn_');
 
         $redirect = route('fakepayment.page', [
             'txn' => $transactionId,
+            'amount' => $amount,
             'callback' => base64_encode($callbackUrl)
         ]);
 
         return [
             'transaction_id' => $transactionId,
+            'amount' => $amount,
             'redirect_url'   => $redirect,
         ];
     }

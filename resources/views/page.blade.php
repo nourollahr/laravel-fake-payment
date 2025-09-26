@@ -7,10 +7,12 @@
 <body>
 <h1>Fake Payment Gateway</h1>
 <p>Transaction: {{ $txn }}</p>
+<p>Amount: {{ $amount }} ریال</p>
 
 <form action="{{ route('fakepayment.submit') }}" method="POST">
     @csrf
     <input type="hidden" name="txn" value="{{ $txn }}">
+    <input type="hidden" name="amount" value="{{ $amount }}">
     <input type="hidden" name="callback" value="{{ request()->query('callback') }}">
     <label for="status">Choose result:</label>
     <select name="status" id="status">
