@@ -16,10 +16,10 @@ composer require nourollahr/laravel-fake-payment
 
 ```bash
 # Publish config
-php artisan vendor:publish --provider="FakePayment\FakePaymentServiceProvider" --tag=config
+php artisan vendor:publish --provider="Nourollahr\FakePayment\FakePaymentServiceProvider" --tag=config
 
 # Publish views
-php artisan vendor:publish --provider="FakePayment\FakePaymentServiceProvider" --tag=views
+php artisan vendor:publish --provider="Nourollahr\FakePayment\FakePaymentServiceProvider" --tag=views
 ```
 
 ## Usage
