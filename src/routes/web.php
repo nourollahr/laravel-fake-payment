@@ -3,4 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use FakePayment\Http\Controllers\PaymentController;
 
-Route::get('/fake-payment/redirect', [PaymentController::class, 'redirect'])->name('fakepayment.redirect');
+Route::get('/fake-payment/page', [PaymentController::class, 'showPaymentPage'])->name('fakepayment.page');
+Route::post('/fake-payment/submit', [PaymentController::class, 'submitPaymentStatus'])->name('fakepayment.submit');
+
